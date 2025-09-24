@@ -36,7 +36,7 @@ const handleSubmit = async (e) => {
         </p>
         <a
           id="black"
-          className="btn"
+          className="btn rounded-5"
           href="https://x.com/NavamaniR2?t=i7-BRaKa_rw5zNc_iyrQXg&s=09"
           target="_blank"
           rel="noopener noreferrer"
@@ -49,7 +49,7 @@ const handleSubmit = async (e) => {
 
         <a
           id="blue"
-          className="btn"
+          className="btn rounded-5"
           href="https://www.linkedin.com/in/nava-mani-49417021a"
           target="_blank"
           rel="noopener noreferrer"
@@ -62,7 +62,7 @@ const handleSubmit = async (e) => {
 
         <a
           id="black"
-          className="btn"
+          className="btn rounded-5"
           href="https://github.com/navamani-dev"
           target="_blank"
           rel="noopener noreferrer"
@@ -84,7 +84,7 @@ const handleSubmit = async (e) => {
           ref={emailref}
         />
         <textarea className="form-control mb-2" placeholder="Message" name="message"  ref={mesref} />
-        <button className="btn btn-primary button" type="submit">Send Message</button>
+        <button className="btn rounded-5 btn rounded-5-primary rounded-5 button" type="submit">Send Message</button>
       </form>
     </>
   );
