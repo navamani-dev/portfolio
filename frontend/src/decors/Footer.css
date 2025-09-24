@@ -8,9 +8,11 @@
     color: white;
     display: flex;
     padding-top: 10px;
-    padding-left: 20%;
     position: relative;
     clear: both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer i {
