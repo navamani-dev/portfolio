@@ -18,7 +18,7 @@ export default function Content() {
 
           <a
             href="/Navamani's Resume.pdf"
-            className="btn btn-primary m-1"
+            className="btn btn-primary rounded-5 m-1"
             download="Navamani's Resume.pdf"
           >
             <span>
@@ -27,7 +27,7 @@ export default function Content() {
             My Resume{" "}
           </a>
 
-          <a href="#form" id="#form" className="btn btn-danger m-1">
+          <a href="#form" id="#form" className="btn btn-danger rounded-5 m-1">
             <span>
               <i className="fa fa-handshake"></i>
             </span>{" "}

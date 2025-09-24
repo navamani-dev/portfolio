@@ -75,15 +75,15 @@ const handleSubmit = async (e) => {
       </div>
 
       <form onSubmit={handleSubmit} className="form form-group bg-light" id="form">
-        <input type="text" name="name" className="form-control" placeholder="Name" ref={nameref} />
+        <input type="text" name="name" className="form-control mb-2" placeholder="Name" ref={nameref} />
         <input
           type="text"
           name="email"
-          className="form-control"
+          className="form-control mb-2"
           placeholder="Email Address"
           ref={emailref}
         />
-        <textarea className="form-control" placeholder="Message" name="message"  ref={mesref} />
+        <textarea className="form-control mb-2" placeholder="Message" name="message"  ref={mesref} />
         <button className="btn btn-primary button" type="submit">Send Message</button>
       </form>
     </>
