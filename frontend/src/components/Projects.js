@@ -13,7 +13,7 @@ export default function Projects(){
             <p>I built a full-stack Student Management System that allows users to add, update, view, and deletestudent records. The app features a clean, user-friendly interface and handles backend operations usingNode.js, Express, and MySQL, with proper input validations.</p>
    <br/>
    <a className="btn bg-primary" target="_blank"  href="https://nodejs-mysql-crud-q6e0.onrender.com/"> <span><i className="fas fa-link"></i></span>  Live Demo</a>
-   <a className="btn bg-light" target="_blank"  href="https://github.com/navamani-dev"><span><i className="fa-brands fa-github"></i></span> View Code</a>
+   <a className="btn bg-light border" target="_blank"  href="https://github.com/navamani-dev"><span><i className="fa-brands fa-github"></i></span> View Code</a>
     </div>
  <div className="bg-light pro1">
             <img id="project" src="portfolio.png" alt="image" />
@@ -22,7 +22,7 @@ export default function Projects(){
                 I I customized a professional portfolio template sourced online and integrated it with backendfeatures. The "Contact Me" form uses a Node.js backend with email functionality, allowing messagesto be sent directly to my inbox. This project reflects both my design adaptability and backendintegration skills.
             </p>
                <a className="btn bg-primary" target="_blank"  href="https://navamani-portfolio.onrender.com/"> <span><i className="fas fa-link"></i></span>  Live Demo</a>
-   <a className="btn bg-light" target="_blank"  href="https://github.com/navamani-dev"><span><i className="fa-brands fa-github"></i></span> View Code</a>
+   <a className="btn bg-light border" target="_blank"  href="https://github.com/navamani-dev"><span><i className="fa-brands fa-github"></i></span> View Code</a>
    
     </div>  
      <div className="bg-light pro1">
@@ -33,7 +33,7 @@ export default function Projects(){
             </p>
             <br/><br/>
                <a className="btn bg-primary" target="_blank"  href="#"> <span><i className="fas fa-link"></i></span>  Live Demo</a>
-   <a className="btn bg-light" target="_blank" href="https://github.com/navamani-dev"><span><i className="fa-brands fa-github"></i></span> View Code</a>
+   <a className="btn bg-light border" target="_blank" href="https://github.com/navamani-dev"><span><i className="fa-brands fa-github"></i></span> View Code</a>
     </div>  
      </div>
     </>

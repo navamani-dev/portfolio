@@ -68,6 +68,9 @@ body {
   }
 }
 
+.btn{
+    border-radius: 25px;
+}
 /* Content */
 .content {
   padding-top: 50px;
@@ -92,15 +95,16 @@ body {
 }
 
 .aboutme {
+    width: 100%;
   padding-left: 15%;
   padding-right: 15%;
   text-align: justify;
   display: flex;
   margin-bottom: 40px;
   margin-top: 100px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 20px;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 /* Skills */
@@ -111,12 +115,11 @@ body {
   flex-wrap: wrap;
   padding-left: 10%;
   padding-right: 10%;
-  gap: 20px;
 }
 
 .skills-category {
   flex: 1;
-  min-width: 250px;
+  min-width: 200px;
   border-right: 1px solid #ccc;
   padding: 15px;
 }
@@ -248,7 +251,7 @@ input, textarea {
 }
 
 .socialMedia i{
-    color: #FF8C00;
+    color:#FF8C00;
 }
 
 #heart {
