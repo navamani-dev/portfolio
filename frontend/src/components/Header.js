@@ -1,4 +1,3 @@
-import "../decors/Header.css";
 export default function Header() {
   return (
     <nav className="nav container-fluid">
