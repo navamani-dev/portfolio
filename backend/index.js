@@ -12,11 +12,6 @@ const path = require("path");
 // Serve frontend build in production
 app.use(express.static(path.join(__dirname, "../frontend/build")));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
-});
-
-
 app.post("/send-email", async (req, res) => {
   const { name, email, message } = req.body;
 
@@ -25,22 +20,27 @@ app.post("/send-email", async (req, res) => {
       service: "gmail",
       auth: {
         user: "navamani.novastrid@gmail.com",
-        pass: "hpgl esxa vwit ztia", // Gmail app password
+        pass: "gwdg dvia nnhl uojo",
       },
     });
 
     await transporter.sendMail({
       from: "navamani.novastrid@gmail.com",
-      to: "navamani.novastrid@gmail.com",
-      subject: `Hi Navamani, Mr.${name} is visiting your Portfolio webisite. and this is ${name}'s Gmail Address ${email}`,
+      to: "navinjanu3025@gmail.com",
+      subject: `Hi Navamani, Mr.${name} is visiting your Portfolio website.`,
       text: message,
     });
 
-    res.status(200).json({ success: true, message: "Email sent!" });
+    res.status(200).json({ success: true });
   } catch (error) {
-    console.error("Email error:", error);
-    res.status(500).json({ success: false, message: "Email failed!" });
+    console.error(error);
+    res.status(500).json({ success: false });
   }
+});
+
+// Catch-all LAST
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
 });
 
 const PORT = process.env.PORT || 5000;

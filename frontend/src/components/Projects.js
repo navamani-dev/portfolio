@@ -1,40 +1,107 @@
-export default function Projects(){
+const projects = [
+  {
+    title: "Quantum Wallet",
+    type: "Professional Product",
+    image: "portfolio.png",
+    description:
+      "Contributing to a crypto wallet platform at BSEtec with product flows similar to modern DeFi tools. Supporting feature development, bug resolution, UI refinement, and performance improvements before launch.",
+    tags: ["React", "Crypto Wallet", "UI Improvements", "Performance", "Product Delivery"],
+    demo: null,
+    code: null,
+    highlight: true,
+  },
+  {
+    title: "Student Management System",
+    type: "Full-stack CRUD App",
+    image: "student.png",
+    description:
+      "Built a full-stack student record management application with create, read, update, and delete workflows, clean form handling, backend APIs, MySQL storage, and practical validation.",
+    tags: ["Node.js", "Express.js", "MySQL", "CRUD", "Validation"],
+    demo: "https://nodejs-mysql-crud-q6e0.onrender.com/",
+    code: "https://github.com/navamani-dev",
+  },
+  {
+    title: "Portfolio Website",
+    type: "Personal Brand Platform",
+    image: "portfolio.png",
+    description:
+      "Customized and integrated a professional portfolio experience with a Node.js contact backend and email delivery flow, demonstrating frontend polish and backend integration capability.",
+    tags: ["React", "Node.js", "Email", "Responsive UI", "Deployment"],
+    demo: "https://navamani-portfolio.onrender.com/",
+    code: "https://github.com/navamani-dev",
+  },
+  {
+    title: "Practice Projects",
+    type: "Continuous Learning",
+    image: "other.png",
+    description:
+      "A collection of focused mini projects used to sharpen development fundamentals, improve implementation speed, and practice real-world problem solving through hands-on code.",
+    tags: ["JavaScript", "React", "Backend Basics", "GitHub"],
+    demo: null,
+    code: "https://github.com/navamani-dev",
+  },
+];
 
+export default function Projects() {
+  return (
+    <section id="projects" className="py-20 sm:py-24">
+      <div className="section-shell">
+        <div className="flex flex-col justify-between gap-6 text-left lg:flex-row lg:items-end">
+          <div>
+            <span className="eyebrow">Selected Work</span>
+            <h2 className="section-title">Projects that show product thinking, backend fundamentals, and UI execution.</h2>
+          </div>
+          <p className="max-w-xl text-base leading-8 text-muted">
+            Recruiters can quickly see the mix that matters: current product experience, full-stack fundamentals, deployment practice, and consistent learning momentum.
+          </p>
+        </div>
 
-    return <>
-        <h2  id="pro"> My Projects </h2>
-        <p > Here are some of my Projects</p>
-   
+        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+          {projects.map((project) => (
+            <article key={project.title} className={`glass-card overflow-hidden text-left ${project.highlight ? "lg:col-span-2 lg:grid lg:grid-cols-[0.95fr_1.05fr]" : ""}`}>
+              <div className="relative min-h-64 overflow-hidden bg-slate-100">
+                <img src={project.image} alt={`${project.title} preview`} className="h-full min-h-64 w-full object-cover transition duration-500 hover:scale-105" />
+                <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-black uppercase tracking-wide text-emerald-700 shadow-sm">
+                  {project.type}
+                </div>
+              </div>
 
-   <div className="pro d-flex justify-content-center gap-4">
-    <div className="bg-light pro1">
-            <img id="project" src="student.png" alt="image" />
-            <h4>Student management website</h4>
-            <p>I built a full-stack Student Management System that allows users to add, update, view, and deletestudent records. The app features a clean, user-friendly interface and handles backend operations usingNode.js, Express, and MySQL, with proper input validations.</p>
-   <br/>
-   <a className="btn bg-primary rounded-5" target="_blank"  href="https://nodejs-mysql-crud-q6e0.onrender.com/"> <span><i className="fas fa-link"></i></span>  Live Demo</a>
-   <a className="btn bg-light border rounded-5" target="_blank"  href="https://github.com/navamani-dev"><span><i className="fa-brands fa-github"></i></span> View Code</a>
-    </div>
- <div className="bg-light pro1">
-            <img id="project" src="portfolio.png" alt="image" />
-            <h4>Portfolio website</h4>
-            <p>
-                I I customized a professional portfolio template sourced online and integrated it with backendfeatures. The "Contact Me" form uses a Node.js backend with email functionality, allowing messagesto be sent directly to my inbox. This project reflects both my design adaptability and backendintegration skills.
-            </p>
-               <a className="btn bg-primary rounded-5" target="_blank"  href="https://navamani-portfolio.onrender.com/"> <span><i className="fas fa-link"></i></span>  Live Demo</a>
-   <a className="btn bg-light border rounded-5" target="_blank"  href="https://github.com/navamani-dev"><span><i className="fa-brands fa-github"></i></span> View Code</a>
-   
-    </div>  
-     <div className="bg-light pro1">
-            <img id="project" src="other.png" alt="image" />
-            <h4>Other Projects</h4>
-            <p>
-                I've worked on several mini projects to sharpen my development skills. Each project helpedme learn something new and improve my practical coding knowledge. You can explore my work on GitHub
-            </p>
-            <br/><br/>
-               <a className="btn bg-primary rounded-5" target="_blank"  href="#"> <span><i className="fas fa-link"></i></span>  Live Demo</a>
-   <a className="btn bg-light border rounded-5" target="_blank" href="https://github.com/navamani-dev"><span><i className="fa-brands fa-github"></i></span> View Code</a>
-    </div>  
-     </div>
-    </>
+              <div className="flex flex-col p-6 sm:p-7">
+                <h3 className="text-2xl font-black text-ink">{project.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-muted">{project.description}</p>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="rounded-full bg-slate-100 px-3 py-1.5 text-xs font-bold text-slate-700">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="mt-7 flex flex-wrap gap-3">
+                  {project.demo && (
+                    <a className="primary-button" target="_blank" rel="noopener noreferrer" href={project.demo}>
+                      <i className="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                      Live Demo
+                    </a>
+                  )}
+                  {project.code && (
+                    <a className="secondary-button" target="_blank" rel="noopener noreferrer" href={project.code}>
+                      <i className="fa-brands fa-github" aria-hidden="true"></i>
+                      View Code
+                    </a>
+                  )}
+                  {!project.demo && !project.code && (
+                    <span className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-black text-emerald-700">
+                      Launch expected soon
+                    </span>
+                  )}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }

@@ -1,98 +1,61 @@
-export default function Skill(){
+const skillGroups = [
+  {
+    icon: "fa-brands fa-react",
+    title: "Frontend Engineering",
+    description: "Building responsive, polished interfaces with attention to interaction quality and maintainable UI structure.",
+    skills: ["HTML5", "CSS3", "JavaScript", "React", "Tailwind CSS", "Responsive Design"],
+  },
+  {
+    icon: "fa-solid fa-server",
+    title: "Backend Development",
+    description: "Comfortable with server-side fundamentals, API flows, authentication basics, and database-backed features.",
+    skills: ["Node.js", "Express.js", "REST APIs", "JWT", "PHP Basics"],
+  },
+  {
+    icon: "fa-solid fa-database",
+    title: "Data and Tools",
+    description: "Practical workflow with databases, testing APIs, version control, and developer tooling used in daily delivery.",
+    skills: ["MySQL", "MongoDB", "Postman", "GitHub", "VS Code"],
+  },
+  {
+    icon: "fa-solid fa-gauge-high",
+    title: "Product Quality",
+    description: "Focused on real product outcomes: bug fixes, UI improvements, performance optimization, and stable releases.",
+    skills: ["Debugging", "Performance", "UI Polish", "Code Review Readiness", "Production Mindset"],
+  },
+];
 
-    return <>
-      <h2 id="skills">Skills</h2>
+export default function Skill() {
+  return (
+    <section id="skills" className="bg-white py-20 sm:py-24">
+      <div className="section-shell">
+        <div className="max-w-3xl text-left">
+          <span className="eyebrow">Skills</span>
+          <h2 className="section-title">A practical full-stack toolkit for building clean, reliable web products.</h2>
+          <p className="section-copy">
+            My skill set is centered on MERN-style web development, product UI implementation, backend fundamentals, and the daily engineering habits needed to contribute in a professional team.
+          </p>
+        </div>
 
-      {/* <div className="container-fluid skills-section">
-  
-  <div className="skills-category">
-    <h3  className="gradient-text" >Frontend</h3>
-    <ul>
-      <li>HTML (Basics)</li>
-      <li>CSS (Basics)</li>
-      <li>JavaScript</li>
-      <li>React</li>
-    </ul>
-  </div>
-
-  <div className="skills-category">
-    <h3  className="gradient-text" >Backend</h3>
-    <ul>
-      <li>Node.js</li>
-      <li>Express.js</li>
-      <li>PHP (Basic)</li>
-    </ul>
-  </div>
-
-  <div className="skills-category">
-    <h3  className="gradient-text" >Auth&Security</h3>
-    <ul>
-      <li>JWT (JSON Web Token)</li>
-    </ul>
-  </div>
-
-  <div className="skills-category">
-    <h3  className="gradient-text" >Databases</h3>
-    <ul>
-      <li>MySQL</li>
-      <li>MongoDB</li>
-    </ul>
-  </div>
-
-  <div className="skills-category last">
-    <h3  className="gradient-text" >Tools & Platforms</h3>
-    <ul>
-      <li>VS Code</li>
-      <li>Postman</li>
-      <li>GitHub</li>
-    </ul>
-  </div>
-</div> */}
-
-<div className="skills-section">
-  
-  <div className="skills-category">
-    <h3 className="gradient-text"><i className="fa-brands fa-html5"></i> Frontend</h3>
-    <ul>
-      <li><i className="fa-brands fa-html5"></i> HTML (Basics)</li>
-      <li><i className="fa-brands fa-css3-alt"></i> CSS (Basics)</li>
-      <li><i className="fa-brands fa-js"></i> JavaScript</li>
-      <li><i className="fa-brands fa-react"></i> React</li>
-    </ul>
-  </div>
-
-  <div className="skills-category">
-    <h3 className="gradient-text"><i className="fa-solid fa-server"></i> Backend</h3>
-    <ul>
-      <li><i className="fa-brands fa-node"></i> Node.js</li>
-      <li><i className="fa-solid fa-code"></i> Express.js</li>
-      <li><i className="fa-brands fa-php"></i> PHP (Basic)</li>
-    </ul>
-  </div>
-
-  <div className="skills-category">
-    <h3 className="gradient-text"><i className="fa-solid fa-lock"></i> Auth & Security</h3>
-    <ul>
-      <li><i className="fa-solid fa-key"></i> JWT (JSON Web Token)</li>
-    </ul>
-  </div>
-
-  <div className="skills-category">
-    <h3 className="gradient-text"><i className="fa-solid fa-database"></i> Databases</h3>
-    <ul>
-      <li><i className="fa-solid fa-database"></i> MySQL</li>
-      <li><i className="fa-solid fa-leaf"></i> MongoDB</li>
-    </ul>
-  </div>
-
-  <div className="skills-category">
-    <h3 className="gradient-text"><i className="fa-solid fa-toolbox"></i> Tools & Platforms</h3>
-    <ul>
-      <li><i className="fa-solid fa-code"></i> VS Code</li>
-      <li><i className="fa-solid fa-paper-plane"></i> Postman</li>
-      <li><i className="fa-brands fa-github"></i> GitHub</li>
-    </ul>
-  </div>
-</div>
-    </>
+        <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          {skillGroups.map((group, index) => (
+            <article key={group.title} className="glass-card p-6 text-left" style={{ animationDelay: `${index * 90}ms` }}>
+              <div className="flex h-12 w-12 items-center justify-center rounded-[8px] bg-emerald-50 text-xl text-emerald-700">
+                <i className={group.icon} aria-hidden="true"></i>
+              </div>
+              <h3 className="mt-5 text-xl font-black text-ink">{group.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-muted">{group.description}</p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {group.skills.map((skill) => (
+                  <span key={skill} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-bold text-slate-700">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
