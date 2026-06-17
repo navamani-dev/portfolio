@@ -47,15 +47,15 @@ export default function Content() {
         </div>
 
         <div className="relative mx-auto w-full max-w-md animate-fadeUp lg:max-w-lg" style={{ animationDelay: "120ms" }}>
-          <div className="absolute -left-8 top-10 hidden rounded-[8px] border border-white bg-white/85 p-4 shadow-soft backdrop-blur md:block">
+          <div className="absolute -left-8 top-10 z-20 hidden rounded-[8px] border border-white bg-white/90 p-4 shadow-soft backdrop-blur md:block">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-muted">Now Building</p>
             <p className="mt-1 text-lg font-black text-ink">Quantum Wallet</p>
           </div>
-          <div className="absolute -right-4 bottom-14 hidden rounded-[8px] bg-ink p-4 text-white shadow-lift md:block">
+          <div className="absolute -right-4 top-28 z-20 hidden rounded-[8px] bg-ink p-4 text-white shadow-lift md:block">
             <p className="text-3xl font-black">6+</p>
             <p className="text-xs font-bold uppercase tracking-wide text-slate-300">Months Backend Training</p>
           </div>
-          <div className="relative overflow-hidden rounded-[8px] border border-white bg-white p-3 shadow-soft">
+          <div className="relative z-10 overflow-hidden rounded-[8px] border border-white bg-white p-3 shadow-soft">
             <img src="Navamani.jpg" alt="Navamani R" className="h-[30rem] w-full rounded-[8px] object-cover object-top" />
             <div className="absolute inset-x-6 bottom-6 rounded-[8px] bg-white/90 p-4 shadow-lg backdrop-blur">
               <p className="text-sm font-bold text-emerald-700">Junior Web Developer</p>
