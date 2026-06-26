@@ -16,10 +16,10 @@
   body {
     margin: 0;
     background:
-      radial-gradient(circle at top left, rgba(16, 185, 129, 0.14), transparent 34rem),
-      radial-gradient(circle at 85% 15%, rgba(14, 165, 233, 0.14), transparent 30rem),
-      #f8fafc;
-    color: #101828;
+      radial-gradient(circle at 18% 8%, rgba(16, 185, 129, 0.18), transparent 28rem),
+      radial-gradient(circle at 84% 12%, rgba(6, 182, 212, 0.14), transparent 28rem),
+      linear-gradient(135deg, #020617 0%, #07111f 48%, #0f172a 100%);
+    color: #e5eef8;
     font-family: Inter, ui-sans-serif, system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -41,30 +41,41 @@
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-emerald-700;
+    @apply inline-flex items-center gap-2 rounded-full border border-emerald-300/25 bg-emerald-300/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-emerald-200 shadow-sm backdrop-blur;
   }
 
   .section-title {
-    @apply mt-4 font-display text-3xl font-extrabold tracking-normal text-ink sm:text-4xl lg:text-5xl;
+    @apply mt-4 font-display text-3xl font-extrabold tracking-normal text-slate-50 sm:text-4xl lg:text-5xl;
   }
 
   .section-copy {
-    @apply mt-4 max-w-3xl text-base leading-8 text-muted sm:text-lg;
+    @apply mt-4 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg;
   }
 
   .glass-card {
-    @apply rounded-[8px] border border-white/70 bg-white/80 shadow-soft backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:shadow-lift;
+    @apply rounded-[8px] border border-white/10 bg-slate-900/70 shadow-soft backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-emerald-300/30 hover:shadow-lift;
   }
 
   .primary-button {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-bold text-white shadow-lg shadow-slate-900/15 transition duration-300 hover:-translate-y-0.5 hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-200;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-5 py-3 text-sm font-bold text-slate-950 shadow-lg shadow-emerald-950/30 transition duration-300 hover:-translate-y-0.5 hover:bg-emerald-300 focus:outline-none focus:ring-4 focus:ring-emerald-300/20;
   }
 
   .secondary-button {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-bold text-ink transition duration-300 hover:-translate-y-0.5 hover:border-emerald-300 hover:text-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-100;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-bold text-slate-100 backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:border-emerald-300/40 hover:bg-emerald-300/10 hover:text-emerald-100 focus:outline-none focus:ring-4 focus:ring-emerald-300/10;
   }
 
   .nav-link {
-    @apply rounded-full px-4 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 hover:text-ink;
+    @apply rounded-full px-4 py-2 text-sm font-semibold text-slate-300 transition hover:bg-white/10 hover:text-emerald-200;
+  }
+
+  .panel-grid {
+    background-image:
+      linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+    background-size: 34px 34px;
+  }
+
+  .accent-text {
+    @apply bg-gradient-to-r from-emerald-300 via-cyan-200 to-amber-200 bg-clip-text text-transparent;
   }
 }
