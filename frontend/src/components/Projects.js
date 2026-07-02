@@ -2,7 +2,7 @@ const projects = [
   {
     title: "Quantum Wallet",
     type: "Professional Product",
-    image: "portfolio.png",
+    image: "quantum.png",
     description:
       "Contributing to a crypto wallet platform at BSEtec with product flows similar to modern DeFi tools. Supporting feature development, bug resolution, UI refinement, and performance improvements before launch.",
     tags: ["React", "Crypto Wallet", "UI Improvements", "Performance", "Product Delivery"],

@@ -32,10 +32,9 @@ export default function Content() {
             </a>
           </div>
 
-          <div className="mt-10 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4">
+          <div className="mt-10 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-3">
             {[
-              ["BSEtec", "Current Role"],
-              ["Quantum", "Wallet Work"],
+              ["Developer", "Current Role"],
               ["MERN", "Web Stack"],
               ["Live", "Deployed Apps"],
             ].map(([value, label]) => (
@@ -53,8 +52,8 @@ export default function Content() {
             <p className="mt-1 text-lg font-black text-white">Quantum Wallet</p>
           </div>
           <div className="absolute -right-4 top-28 z-20 hidden rounded-[8px] bg-amber-500 p-4 text-ink shadow-lift md:block">
-            <p className="text-3xl font-black">API</p>
-            <p className="text-xs font-bold uppercase tracking-wide">Backend Practice</p>
+            <p className="text-3xl font-black">MERN</p>
+            <p className="text-xs font-bold uppercase tracking-wide">Stack Developer</p>
           </div>
           <div className="relative z-10 overflow-hidden rounded-[8px] border border-white/10 bg-slate-950 p-3 shadow-soft">
             <div className="panel-grid absolute inset-3 rounded-[8px] opacity-20"></div>
