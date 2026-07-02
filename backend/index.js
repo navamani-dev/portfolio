@@ -16,12 +16,13 @@ app.post("/send-email", async (req, res) => {
   const { name, email, message } = req.body;
 
   try {
-    let transporter = nodemailer.createTransport({
-       host: "smtp.gmail.com",
-  port: 465,
-  secure: true, 
-      auth: {
-        user: "navamani.novastrid@gmail.com",
+   const transporter = nodemailer.createTransport({
+  host: "smtp.gmail.com",
+  port: 587,
+  secure: false,
+  requireTLS: true,
+  auth: {
+    user: "navamani.novastrid@gmail.com",
         pass: "gwdg dvia nnhl uojo",
       },
     });
