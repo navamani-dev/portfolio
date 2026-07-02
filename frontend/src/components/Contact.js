@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 
 const socialLinks = [
-  { label: "LinkedIn", icon: "fa-brands fa-linkedin", href: "https://www.linkedin.com/in/nava-mani-49417021a" },
+  { label: "LinkedIn", icon: "fa-brands fa-linkedin", href: "https://www.linkedin.com/in/navamani-r-49417021a" },
   { label: "GitHub", icon: "fa-brands fa-github", href: "https://github.com/navamani-dev" },
   { label: "Twitter", icon: "fa-brands fa-x-twitter", href: "https://x.com/NavamaniR2?t=i7-BRaKa_rw5zNc_iyrQXg&s=09" },
   { label: "Email", icon: "fa-solid fa-envelope", href: "mailto:navamani.developer@gmail.com" },
